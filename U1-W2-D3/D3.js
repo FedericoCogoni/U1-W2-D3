@@ -106,6 +106,7 @@ const starWarsCharacters = [
 */
 console.log("-Esercizio 1-")
 const charactersNames = []
+console.log(charactersNames)
 
 /* ESERCIZIO 2
   Utilizzando un ciclo for, cicla l'array "starWarsCharacters".
@@ -124,10 +125,9 @@ console.log("-Esercizio 3-")
 const femaleCharacters = []
 
 for (i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters[i].gender != "female") {
-    continue
+  if (starWarsCharacters[i].gender === "female") {
+    femaleCharacters.push(starWarsCharacters[i])
   }
-  femaleCharacters.push(starWarsCharacters[i])
 }
 console.log(femaleCharacters)
 /* ESERCIZIO 4
@@ -214,10 +214,11 @@ if (crewMass > 1000) {
   "n/a" a "robot" (Tip: puoi effettuare la riassegnazione del valore corrispondente o creare un nuovo array)
 */
 console.log("-Esercizio 8-")
-for (let i = 0; i < starWarsCharacters.length; i++) {
-  if (starWarsCharacters[i].gender == "n/a") {
-    starWarsCharacters[i].gender = "robot"
-    console.log(starWarsCharacters[i])
+const newArray = [...starWarsCharacters]
+for (let i = 0; i < newArray.length; i++) {
+  if (newArray[i].gender == "n/a") {
+    newArray[i].gender = "robot"
+    console.log(newArray[i])
   }
 }
 console.log("-Esercizio 8/2-")
@@ -238,17 +239,26 @@ for (let i = 0; i < starWarsCharacters.length; i++) {
   prima e dopo l'operazione.
 */
 console.log("-Esercizio 9-")
+console.log(charactersNames)
 console.log(charactersNames.length)
 for (let i = 0; i < charactersNames.length; i++) {
   for (let y = 0; y < femaleCharacters.length; y++) {
     if (charactersNames[i] === femaleCharacters[y].name) {
-      charactersNames.splice(y, 1)
+      charactersNames.splice(i, 1)
     }
   }
 }
 console.log(charactersNames.length)
+console.log(charactersNames)
+
 /* --EXTRA-- ESERCIZIO 10
   Crea una funzionalità che selezioni un elemento casuale dall'array "starWarsCharacters" e 
   ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 console.log("-Esercizio 10-")
+const randomIndex = Math.floor(Math.random) * starWarsCharacters.length
+const bioString = ""
+
+const x = "federico"
+
+console.log("valore di x", x)
