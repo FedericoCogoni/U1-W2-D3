@@ -256,9 +256,6 @@ console.log(charactersNames)
   ne stampi in console le proprietà in modo discorsivo (a tuo piacimento).
 */
 console.log("-Esercizio 10-")
-const randomIndex = Math.floor(Math.random) * starWarsCharacters.length
-const bioString = ""
-
-const x = "federico"
-
-console.log("valore di x", x)
+const randomIndex = Math.floor(Math.random() * starWarsCharacters.length)
+const bioString = "mi chiamo " + starWarsCharacters[randomIndex].name
+console.log(bioString)
